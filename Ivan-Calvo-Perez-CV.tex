@@ -1,0 +1,172 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\robustify\cftdotfill
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{6pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Iv\'an Felipe Calvo P\'erez} & \textbf{Student} \\
+(+506)8694-2921 & \textbf{ivanfelipecp@gmail.com}\\
+https://github.com/ivanfelipecp & https://www.linkedin.com/in/ivanfelipecp \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item
+
+	\ressubheading{Tecnol\'ogico de Costa Rica}{Cartago, Costa Rica}{Computer Science Bachelor}{2015 - present}
+
+	\begin{itemize}
+
+		\resitem{Department of Computer Science}
+		\resitem{Emphasis on computer science and software development}
+		\resitem{Average GPA 77.96(out of 100)}
+		\resitem{Expected graduation date: first half of 2019}
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+%\item I have worked in differents software proyect throughout of my career, some}
+\item \textbf{Courses:}
+\begin{itemize}
+\item \textbf{Compilers \& Interpreters:} As a course project, I developed the scanner(using an \textbf{FSA}, know as \textbf{automata}), parser, semantic analyzer, semantics, equivalent TASM code of a language called \textbf{Kapl\'a}, based on the language \textbf{Klingon} from the \textbf{Star Trek} series.
+\item \textbf{Databases \rom{2}:} As a course project, my classmates and I developed a \textbf{data-warehouse} using MySQL, MongoDB, SQL Server, excel and text files as a data sources, then we used the visual studio 2013 ETL(Extract and Load) tool to migrate the data to the data-warehouse(SQL Database). \par 
+We also used techniques like replication(SQL, MySQL and MongoDB) and sharding(MongoDB).
+\item \textbf{Operating Systems:} As a course project, I developed a C application, focused on the use of shared memory and semaphores, making use of the algorithms of paging and segmentation.
+\item \textbf{OOP:} As a course project, I developed a \textbf{Bomberman game} in Java in my second semester.
+\item \textbf{Databases \rom{1}:} As a course project, I developed a NodeJS web application, using SQL Server as a database.
+
+\end{itemize}
+\item \textbf{Real life solutions:}\\
+\begin{itemize}
+\item I developed a Java application for my dad called EasyMail, that facilitates the email sending process.
+\end{itemize}
+
+\item \textbf{Workshops:}\\
+\begin{itemize}
+\item A classmate and I gave a workshop called "Introduction to Raspberry-Pi" in COMPDES 2016.
+\end{itemize}
+%\item
+%	\ressubheading{Proyects}{}{}{}
+%	\begin{itemize}
+%      \resitem{I have worked in different software proyect throughout of my career, some of them are in %my github}
+%      \resitem{I developed a Java application for my dad called EasyMail that facilitate the email %sending process}
+%	\end{itemize}
+%\item
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Tutorings, teaching assistantships and others}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item Tutor, Introduction to Programming course, 1st year students (2017 - present)
+\item Teacher, PAMTEC (teaching technology to senior citizens), Tecnol\'ogico de Costa Rica (2017 - present)
+\item Teaching Assistant, Object Oriented Programming, first and second year students (2016)
+\item Student Representative, Computer Science department (2015)
+%\item
+%	\ressubheading{Tecnológico de Costa Rica}{}{}{}
+%	\begin{itemize}
+%      \resitem{I am introduction to programming tutor(2017-present)}
+%      \resitem{I was object orientated programming tutor(first and second half of 2016)}
+%      
+%	\end{itemize}
+%\item
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item \textbf{Programming languages and hipertext-markup languages}
+	\begin{itemize}
+      \item{Python, NodeJS, C\# , Java, C, C{++} , JavaScript, SQL, MongoDB, Assembler 80x86, HTML, CSS}
+	\end{itemize}
+\item \textbf{Microchips knowledge}
+	\begin{itemize}
+      \item{Arduino and Raspberry-Pi}
+	\end{itemize}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Languages}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item \textbf{Spanish(Native language)}
+\item English(Intermediate 70\%)
+\end{itemize}
+
+
+\end{document}
